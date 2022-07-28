@@ -50,7 +50,8 @@ function rpcJSON2CB (tx) {
         script: x.scriptPubKey.hex,
         value: Math.round(x.value * 1e8) // satoshis
       }
-    })
+    }),
+    confirmations: tx.confirmations,
   }
 }
 
